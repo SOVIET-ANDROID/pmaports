@@ -16,7 +16,7 @@ jobs:
 
       - name: Install pmbootstrap
         run: |
-          ls =lha
+          ls -lha
           cd ..
           ls -lha
           git clone https://gitlab.postmarketos.org/postmarketOS/pmbootstrap

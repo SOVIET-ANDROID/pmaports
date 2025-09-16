@@ -11,10 +11,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        path: pmaports
 
       - name: Install pmbootstrap
         run: |
+          ls =lha
+          cd ..
+          ls =lha
           git clone https://gitlab.postmarketos.org/postmarketOS/pmbootstrap
           cd pmbootstrap
-          pip3 install .
+          pip3 install --user .
+          echo $PWD
           pmbootstrap --version

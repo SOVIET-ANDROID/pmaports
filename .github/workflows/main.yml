@@ -14,7 +14,7 @@ jobs:
 
       - name: Install pmbootstrap
         run: |
-          git clone https://gitlab.com/postmarketOS/pmbootstrap.git
+          git clone https://gitlab.postmarketos.org/postmarketOS/pmbootstrap
           cd pmbootstrap
           pip3 install .
           pmbootstrap --version

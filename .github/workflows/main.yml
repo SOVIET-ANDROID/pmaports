@@ -16,11 +16,8 @@ jobs:
 
       - name: Install pmbootstrap
         run: |
-          ls -lha
-          cd ..
-          ls -lha
-          git clone https://gitlab.postmarketos.org/postmarketOS/pmbootstrap
-          cd pmbootstrap
+          git clone https://gitlab.postmarketos.org/postmarketOS/pmbootstrap $HOME/pmbootstrap
+          cd $HOME/pmbootstrap
           pip3 install --user .
-          echo $PWD
+          echo $GITHUB_WORKSPACE
           pmbootstrap --version

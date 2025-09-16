@@ -18,7 +18,7 @@ jobs:
         run: |
           ls =lha
           cd ..
-          ls =lha
+          ls -lha
           git clone https://gitlab.postmarketos.org/postmarketOS/pmbootstrap
           cd pmbootstrap
           pip3 install --user .

@@ -9,12 +9,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: pmaports bs
+        run: |
+          git clone https://gitlab.postmarketos.org/postmarketOS/pmaports.git $GITHUB_WORKSPACE/pmaports --single-branch --depth=1
+          cd $GITHUB_WORKSPACE/pmaports 
+          git remote add sov  https://github.com/SOVIET-ANDROID/pmaports.git
+          git fetch sov && git checkout sov/master
 
       - name: Install pmbootstrap
         run: |
-          git clone https://gitlab.postmarketos.org/postmarketOS/pmbootstrap $HOME/pmbootstrap
+          git clone https://gitlab.postmarketos.org/postmarketOS/pmbootstrap $HOME/pmbootstrap --single-branch --depth=1
           cd $HOME/pmbootstrap
           pip3 install --user .
 

@@ -17,5 +17,11 @@ jobs:
           git clone https://gitlab.postmarketos.org/postmarketOS/pmbootstrap $HOME/pmbootstrap
           cd $HOME/pmbootstrap
           pip3 install --user .
-          echo $GITHUB_WORKSPACE
-          ls $GITHUB_WORKSPACE
+
+      - name: copy pmbootstrap config 
+        run: |
+         cp $GITHUB_WORKSPACE/.github/workflows/pmbootstrap_v3.cfg .config/pmbootstrap_v3.cfg
+
+      - name: copy pmbootstrap config 
+        run: |
+         pmbootstrap install

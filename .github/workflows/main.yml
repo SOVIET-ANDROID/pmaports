@@ -20,4 +20,4 @@ jobs:
           cd $HOME/pmbootstrap
           pip3 install --user .
           echo $GITHUB_WORKSPACE
-          ls $HOME/pmaports
+          ls $GITHUB_WORKSPACE

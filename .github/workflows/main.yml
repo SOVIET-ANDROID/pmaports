@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        path: pmaports
+        with:
+          path: pmaports
 
       - name: Install pmbootstrap
         run: |

@@ -24,8 +24,8 @@ jobs:
 
       - name: copy pmbootstrap config 
         run: |
-         cp $GITHUB_WORKSPACE/.github/workflows/pmbootstrap_v3.cfg $HOME/.config/pmbootstrap_v3.cfg
+         cp $GITHUB_WORKSPACE/pmaports/.github/workflows/pmbootstrap_v3.cfg $HOME/.config/pmbootstrap_v3.cfg
 
       - name: copy pmbootstrap config 
         run: |
-         pmbootstrap install
+         pmbootstrap --as-root install

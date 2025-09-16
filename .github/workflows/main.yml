@@ -28,4 +28,5 @@ jobs:
 
       - name: copy pmbootstrap config 
         run: |
+         ls -lha $GITHUB_WORKSPACE/
          pmbootstrap --as-root install
